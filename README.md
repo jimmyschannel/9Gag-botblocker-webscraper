@@ -16,9 +16,9 @@ Important: It only works with Chrome and with an adblocker active, otherwise it 
 ## Requirements
 
 - Python 3.x
-- Selenium
-- Chrome WebDriver
-- `webdriver_manager` for automatic ChromeDriver installation.
+- Selenium pip install -U selenium
+- Google Chrome with active adblock
+- `webdriver_manager` pip install webdriver-manager
 
 ## Installation & How to use
 
