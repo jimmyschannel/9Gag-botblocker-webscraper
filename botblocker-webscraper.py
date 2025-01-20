@@ -8,7 +8,7 @@ from collections import Counter
 #IMPORTANT! Webscrapers are legal, but not all sites allow it, I am NOT responsible for how you use this code.
 #Respect the website's robots.txt file and Terms of Service to avoid any legal issues - Jim Versteeg
 def setup_driver_with_profile():
-    user_data_dir = r"C:\Users\'USERNAME'\AppData\Local\Google\Chrome\User Data"  #Replace 'USERNAME' with your actual user path
+    user_data_dir = r"C:\Users\USERNAME\AppData\Local\Google\Chrome\User Data"  #Replace 'USERNAME' with your actual user path
     profile_dir = "Profile 1"  #Replace with your specific profile directory (Usaully "Profile" or "Profile 1" or "Default")
 
     options = webdriver.ChromeOptions()
@@ -53,7 +53,7 @@ def block_user(driver, creator_username):
 
 def fetch_post_data_creator_no_duplicates():
     driver = setup_driver_with_profile()  #Use the profile-configured driver instead of a new one
-    url = "https://9gag.com/fresh" #You can also change this to https://9gag/com/trending instead
+    url = "https://9gag.com/trending" #You can also change this to https://9gag/com/trending instead
     driver.get(url)
 
     driver.implicitly_wait(5)
@@ -62,7 +62,7 @@ def fetch_post_data_creator_no_duplicates():
     creators = []
     visited_links = set()
     scroll_pause_time = 2
-    max_posts = 500
+    max_posts = 1000
 
     try:
         while len(post_data) < max_posts:
